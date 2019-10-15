@@ -1,0 +1,16 @@
+# This file contains pkgconfig build requirements that get picked up
+# but are undesirable. One entry per line, no whitespace.
+ao
+cutils
+hardware
+libclc
+libdrm_etnaviv
+libdrm_freedreno
+libglvnd
+libgssglue
+libomxil-bellagio
+libpcsclite
+libselinux
+simpenrose
+sync
+v3dv3

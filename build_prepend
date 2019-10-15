@@ -1,0 +1,1 @@
+echo "VBOX_GCC_OPT=$CXXFLAGS" >> LocalConfig.kmk

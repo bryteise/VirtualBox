@@ -1,0 +1,33 @@
+From c978942425f9bb48d8b7a4445c31c4da43568410 Mon Sep 17 00:00:00 2001
+From: William Douglas <william.douglas@intel.com>
+Date: Wed, 20 Mar 2019 09:40:22 -0700
+Subject: [PATCH] Don't quit on unrecognized options
+
+---
+ configure | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+diff --git a/configure b/configure
+index 6c964915..29cc20bf 100755
+--- a/configure
++++ b/configure
+@@ -80,7 +80,7 @@ WITH_XPCOM=1
+ WITH_PYTHON=1
+ WITH_JAVA=1
+ WITH_VMMRAW=1
+-WITH_LIBIDL=1
++WITH_LIBIDL=0
+ WITH_GSOAP=0
+ WITH_QT5=1
+ WITH_SDL=1
+@@ -2631,7 +2631,6 @@ for option in "$@"; do
+       echo
+       echo "Unrecognized option \"$option\""
+       echo
+-      show_help
+       ;;
+   esac
+ done
+-- 
+2.20.1
+

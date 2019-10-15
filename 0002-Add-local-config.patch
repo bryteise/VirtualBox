@@ -1,0 +1,54 @@
+From f65249d5a62d86e6904131ca01a2e47fdb8a8e30 Mon Sep 17 00:00:00 2001
+From: William Douglas <william.douglas@intel.com>
+Date: Tue, 15 Oct 2019 13:03:50 -0700
+Subject: [PATCH 2/2] Add local config
+
+---
+ LocalConfig.kmk | 35 +++++++++++++++++++++++++++++++++++
+ 1 file changed, 35 insertions(+)
+ create mode 100644 LocalConfig.kmk
+
+diff --git a/LocalConfig.kmk b/LocalConfig.kmk
+new file mode 100644
+index 00000000..cfc9d7bb
+--- /dev/null
++++ b/LocalConfig.kmk
+@@ -0,0 +1,35 @@
++# do not build test cases
++VBOX_WITH_TESTCASES :=
++VBOX_WITH_TESTSUITE :=
++VBOX_WITH_VALIDATIONKIT :=
++
++# no legacy X.org - use KMS
++VBOX_USE_SYSTEM_XORG_HEADERS = 1
++VBOX_NO_LEGACY_XORG_X11 = 1
++
++VBOX_WITH_ORIGIN :=
++VBOX_PATH_APP_PRIVATE_ARCH := /usr/lib64/virtualbox
++VBOX_PATH_SHARED_LIBS := $(VBOX_PATH_APP_PRIVATE_ARCH)
++VBOX_WITH_RUNPATH := $(VBOX_PATH_APP_PRIVATE_ARCH)
++VBOX_PATH_APP_PRIVATE := /usr/share/virtualbox
++VBOX_PATH_APP_DOCS := /usr/share/doc/virtualbox
++VBOX_PATH_PACKAGE_DOCS := $(VBOX_PATH_APP_DOCS)
++VBOX_BLD_PYTHON = python
++VBOX_JAVA_HOME = /usr/lib/jvm/java-1.8.0-openjdk/
++
++# do not fail on warning
++VBOX_GCC_WERR =
++VBOX_GCC_WARN =
++
++# fix gsoap missing zlib include and produce errors with --as-needed
++VBOX_GSOAP_CXX_LIBS := gsoapssl++ z
++
++# use system xorg and gl headers
++VBOX_USE_SYSTEM_XORG_HEADERS = 1
++VBOX_USE_SYSTEM_GL_HEADERS = 1
++
++# no update request
++VBOX_WITH_UPDATE_REQUEST := 0
++
++# build shared library
++VBOX_GUI_WITH_SHARED_LIBRARY = 1
+-- 
+2.23.0
+

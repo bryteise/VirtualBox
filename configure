@@ -1,0 +1,6 @@
+--disable-docs
+--enable-webservice
+--enable-vde
+--enable-vnc
+--disable-kmods
+--with-makeself=/usr/bin/true

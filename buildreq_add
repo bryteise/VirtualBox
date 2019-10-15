@@ -1,0 +1,33 @@
+# This file contains additional build requirements that did not get
+# picked up automatically. One name per line, no whitespace.
+LibVNCServer-dev
+SDL-dev
+SDL_ttf-dev
+acpica-unix2-bin
+alsa-lib-dev
+buildreq-qmake
+curl-dev
+gcc-dev32
+gcc-libgcc32
+gcc-libstdc++32
+glibc-libc32
+glibc-dev32
+glu-dev
+libXcomposite-dev
+libXcursor-dev
+libXinerama-dev
+libXmu-dev
+libXrandr-dev
+libXtst-dev
+libpng-dev
+libxml2-dev
+libxslt-bin
+linux-libc-headers
+mesa-dev
+nasm
+openjdk
+openssl-dev
+pulseaudio-dev
+python-dev
+python3
+xorg-server-dev
